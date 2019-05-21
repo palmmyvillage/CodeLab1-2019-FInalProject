@@ -16,9 +16,8 @@ public class Bullet : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter(Collision other)
     {
-        if (!other.gameObject.CompareTag("Floor"))
-            Destroy(gameObject);
+        Destroy(gameObject);
     }
 }
